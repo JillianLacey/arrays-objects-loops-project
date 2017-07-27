@@ -26,28 +26,24 @@ function getFourthNum() {
 function smallNums() {
     let smallNums = [];
     // Your answer here:
-
-
-}
-
-
-let bigNums = [3, 12, 7, 56, 19, 9, 1, 5, 14, 10, 2];
-
-function nixLittleNums() {
-    // Answer goes here:
-    for (let i = 0; i < bigNums.length; i++) {
-        if (bigNums[i] < 10) {
-            bigNums[i] = "x";
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] < 10) {
+            smallNums.push(numbers[i]);
         }
     }
-    return bigNums;
+    return smallNums;
 }
+
+
+
 
 /*
 3. Add 12, 99, and 101 (in that order) to the end of the "numbers" array. Return the "numbers" array.
 */
 function addNums() {
     // Your answer here:
+    numbers.push(12, 99, 101);
+    return numbers;
 }
 
 
@@ -71,6 +67,8 @@ let film = {
 */
 function addBoxOffice() {
     // Your answer here:
+    film.boxoffice = 269061;
+    return film;
 }
 
 /*
@@ -78,17 +76,17 @@ function addBoxOffice() {
 */
 function addActor() {
     // Your answer here:
+    film.actors.push("Yukiko Shimazaki");
+    return film;
 }
 
 /*
-6. Now that you've added a "boxoffice" property, subtract "budget" from "property" and return the difference. This number is the amount lost by the studio in making the film. Return the loss.
+6. Now that you've added a "boxoffice" property, subtract "budget" from "boxoffice" and return the difference. This number is the amount lost by the studio in making the film. Return the loss.
 */
 function getLosses() {
     // Your answer here:
+    return (film.boxoffice - film.budget);
 }
-
-
-
 
 
 
@@ -104,11 +102,11 @@ let letterVals = ["v", "x", "r", "f", "p"];
 function interleave() {
     let vals = [];
     // Your answer here:
+    for (var i = 0; i < numberVals.length; i++) {
+        vals.push(letterVals[i] + numberVals[i])
+    }
+    return vals;
 }
-
-
-
-
 
 
 /*
@@ -121,4 +119,11 @@ let second = ["think", "stand", "cheese", "break", "numinous", "mouse", "close",
 function union() {
     let same = [];
     // Your answer here:
+
+    for (var i = 0; i < numberVals.length; i++) {
+        if (first[i] === second[i]) {
+            same.push(first[i]);
+        }
+    }
+    return same;
 }
